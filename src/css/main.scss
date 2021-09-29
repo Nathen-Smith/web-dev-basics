@@ -1,1 +1,32 @@
 /* Your SCSS here. */
+$transition-time : 0.4s;
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+#navbar {
+    padding-top: 40px;
+    display: block;
+    overflow: hidden;
+    background-color:cornsilk;
+    width: 100%;
+    margin-left:0px;
+}
+
+#navbar-brand {   
+    font-size: 36px;
+}
+
+.nav-link, header, footer {
+    font-size: 20px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
