@@ -99,7 +99,7 @@ a, a:visited {
     text-decoration: none;
     border-width: 1px;
     border-radius: 6px;
-    color: white;
+    color: gray;
 }
 
 #navbar {
@@ -115,10 +115,12 @@ a, a:visited {
 
 #navbar-brand {   
     font-size: 36px;
+    color: white;
 }
 
 .nav-link, header, footer {
     font-size: 20px;
+    color: gray;
 }
 
 .sticky {
