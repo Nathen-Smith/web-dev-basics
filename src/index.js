@@ -10,4 +10,6 @@ import './index.html';
 import './css/main.scss';
 
 // Scripts
-import './js/main.js';
+import './js/scrolling.js';
+import './js/modal.js'
+import './js/carousel.js'

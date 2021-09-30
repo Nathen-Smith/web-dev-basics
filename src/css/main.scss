@@ -1,19 +1,96 @@
 /* Your SCSS here. */
-$transition-time : 0.4s;
+$navbar-transition-time : 0.4s;
+$modal-color : #40454b;
+
+@mixin centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@mixin centered-col-text {
+    & p {
+        text-align: center;
+    }
+}
+
+@mixin remove-default-button-styling {
+    margin: 0 auto;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+@mixin debug {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+@mixin resize {
+    @media (min-width : 1280px) {
+        width: 70%;
+    }
+    @media (min-width : 1920px) {
+        width: 50%;
+    }
+      
+}
+
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
     margin: 0px;
+    color: white;
+    background: linear-gradient(180deg,#343a40,#2f333a 10%,#292c33);
+}
+header {
+    @include centered-content;
+}
+footer {
+    height: 100px;
+    background-image: url('../assets/hk.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    & div.footer-icons {
+        color: white;
+        height: 100px;
+        @include centered-content;
+        & .fa-facebook, .fa-amazon-pay, .fa-twitter{
+           color: white;
+        }
+    }
+}
+
+video {
+    @include resize;
+    height: 50%;
+    width: 60%;
+
+}
+
+a, a:visited {
+    text-decoration: none;
+    border-width: 1px;
+    border-radius: 6px;
+    color: white;
 }
 
 #navbar {
-    padding-top: 40px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: block;
-    overflow: hidden;
-    background-color:cornsilk;
+    background-color:#4d5258;
     width: 100%;
+    overflow: hidden;
     margin-left:0px;
 }
 
@@ -29,4 +106,127 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-  }
+}
+
+.section {
+    @include centered-content;
+    
+    &-buffer {
+        padding-top: 50px;
+    }
+   
+    & p, h3, h4, video {
+        @include centered-content;
+    }
+
+    & p {
+        @include resize;
+        width: 60%;
+        color: rgb(200, 200, 200);
+    }
+    & h4 {
+        font-weight: 500;
+        padding: 5px;
+    }
+}
+
+.row {
+    display: flex;
+    width: 90%;
+    @include resize;
+    @include centered-content;
+}
+
+.left-col {
+    float: left;
+    width: 50%;
+    @include centered-col-text;
+}
+
+.right-col {
+    float: left;
+    width: 50%;
+    @include centered-col-text;
+}
+
+.modal-button {
+    @include centered-content;
+    @include remove-default-button-styling;
+    a {
+        padding: 30px;
+        cursor: pointer;
+        background: $modal-color;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        border-radius: 10px;
+        
+    }
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0; //for transition
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    @include centered-content;
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+    }
+    &-bg {
+        position: absolute;
+        background: $modal-color;
+        width: 100%;
+        height: 100%;
+    }
+    &-container {
+        border-radius: 10px;
+        background: #fff;
+        color: black;
+        position: relative;
+        padding: 30px;
+    }
+    &-close {
+        @include remove-default-button-styling;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: lightgray;
+        cursor: pointer;
+        &:hover {
+            color: gray;
+            transition: 0.1s;
+        }
+    }
+}
+
+.carousel-container {
+    @include centered-content;
+    display: flex;
+
+    & .carousel-images {
+        @include resize;
+        width: 60%;
+        & img {
+            margin: 0 auto;
+            height: 50%;
+            width: 100%;
+            display: none;
+        }
+    }
+
+    & #left-arrow, #right-arrow {
+        color: gray;
+        cursor: pointer;
+        &:hover {
+            color: white;
+            transition: 0.1s;
+        }
+    }
+}
