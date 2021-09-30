@@ -22,22 +22,24 @@ $modal-color : #40454b;
     padding: 0;
 }
 
-@mixin debug {
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
-}
+// @mixin debug {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: red;
+// }
 
 @mixin resize {
-    @media (min-width : 1280px) {
+    @media (min-width : 1080px) {
         width: 70%;
     }
+    @media (min-width : 1366px) {
+        width: 65%;
+    }
     @media (min-width : 1920px) {
-        width: 50%;
+        width: 60%;
     }
       
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -50,21 +52,38 @@ body {
     color: white;
     background: linear-gradient(180deg,#343a40,#2f333a 10%,#292c33);
 }
+
 header {
     @include centered-content;
 }
+
+img {
+    @include centered-content;
+    height: 30%;
+    width: 30%;
+    @media (min-width: 1024px) {
+        height: 20%;
+        height: 20%;
+    }
+}
+
 footer {
-    height: 100px;
+    height: 300px;
+    // @include resize;
+    @include centered-content;
     background-image: url('../assets/hk.jpg');
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     
     & div.footer-icons {
         color: white;
-        height: 100px;
+        height: 300px;
         @include centered-content;
         & .fa-facebook, .fa-amazon-pay, .fa-twitter{
            color: white;
+           padding-left: 5px;
+           padding-right: 5px;
         }
     }
 }
@@ -110,29 +129,45 @@ a, a:visited {
 
 .section {
     @include centered-content;
-    
-    &-buffer {
-        padding-top: 50px;
+    padding-bottom: 20px;
+    &:nth-child(even) {
+        background-color: rgb(31, 31, 31);
     }
-   
-    & p, h3, h4, video {
+    &-buffer {
+        padding-top: 70px;
+    }
+
+    & h3, video {
         @include centered-content;
     }
 
     & p {
         @include resize;
+        @include centered-content;
         width: 60%;
         color: rgb(200, 200, 200);
     }
+    & p.title {
+        font-weight: bold;
+        color: white;
+        padding-bottom: 10px;
+    }
     & h4 {
+        @include centered-content;
         font-weight: 500;
         padding: 5px;
     }
+
+    &-modal {
+        padding-bottom: 100px;
+    }
+    
 }
 
 .row {
     display: flex;
     width: 90%;
+    padding-bottom: 20px;
     @include resize;
     @include centered-content;
 }
@@ -190,7 +225,11 @@ a, a:visited {
         background: #fff;
         color: black;
         position: relative;
-        padding: 30px;
+        padding: 70px;
+        width: 60%;
+        & h1, h2 {
+            text-align: center;
+        }
     }
     &-close {
         @include remove-default-button-styling;
@@ -222,11 +261,19 @@ a, a:visited {
     }
 
     & #left-arrow, #right-arrow {
-        color: gray;
+        color: lightgray;
         cursor: pointer;
         &:hover {
             color: white;
             transition: 0.1s;
         }
     }
+}
+
+.spacer {
+    padding-top: 200px;
+}
+
+#portrait {
+    padding-top: 40px;
 }

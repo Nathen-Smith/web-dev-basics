@@ -13,34 +13,23 @@
   <link href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
   <link href="../node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
   <link href="../node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
-
 </head>
 
 <body>
-  <header id="header">wuss good this b tha headah</header>
+  <header id="header">Nathen Smith</header>
+
   <nav id="navbar">
-
     <a id="navbar-brand" href="#">Nathen Smith </a>
-
     <a class="nav-link" href="#about">about</a>
     <a class="nav-link" href="#portfolio">portfolio</a>
     <a class="nav-link" href="#experience">experience</a>
-    <a class="nav-link" href="#more">more</a>
-
   </nav>
 
   <div id="top"></div>
-
-
-
-
-
-
-
-
+  <img src="./assets/me.jpg" alt="portrait" id="portrait">
 
   <div class="section">
-    <div id="about">
+    <div id="about" class="spacer">
       <div class="section-buffer"></div>
       <h3>about</h3>
       <br />
@@ -58,7 +47,7 @@
       <br />
       <div class="carousel-container">
         <div id="left-arrow">
-          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-left fa-lg"></i>
         </div>
         <div class="carousel-images">
           <img src="assets/CS411Photos/1-login.jpg" alt="image_1">
@@ -68,7 +57,7 @@
           <img src="assets/CS411Photos/5-likes.jpg" alt="image_5">
         </div>
         <div id="right-arrow">
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right fa-lg"></i>
         </div>
       </div>
       <h4>HippoCampus</h4>
@@ -106,88 +95,109 @@
     <div id="experience">
       <div class="section-buffer"></div>
       <h3>experience</h3>
+      <br />
       <div class="row">
         <div class="left-col">
+          <p class="title">Software Engineering Development Intern @ Forward Data Lab</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet nisl lacinia felis facilisis
-            tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis
-            varius elit. Etiam eleifend aliquet velit vel hendrerit. Suspendisse urna lectus, laoreet vitae feugiat
-            quis, ullamcorper vitae ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Vestibulum aliquam tincidunt sagittis. Vivamus massa erat, auctor sit amet imperdiet
-            pulvinar, porttitor quis arcu.
+            Software development for Professor Kevin C.C. Chang's group, Forward (Far-Out Reach to Worldwide Access and
+            Retrieval of Data) Data Lab. Worked on the Education Today project.
           </p>
         </div>
         <div class="right-col">
+          <p class="title">CS 411 Course Assistant</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet nisl lacinia felis facilisis
-            tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis
-            varius elit. Etiam eleifend aliquet velit vel hendrerit. Suspendisse urna lectus, laoreet vitae feugiat
-            quis, ullamcorper vitae ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Vestibulum aliquam tincidunt sagittis. Vivamus massa erat, auctor sit amet imperdiet
-            pulvinar, porttitor quis arcu.
+            As a CA for CS 411 Database Systems, I help answer questions during lecture, in office hours, and on the
+            class forum; and write and proof homework and exam questions and grade homework.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left-col">
+          <p class="title">Full Stack Engineer Intern</p>
+          <p>
+            Implemented and designed profile and credential update functionality based on Facebook’s implementation,
+            complete with Two-Factor Authentication from Twilio SMS and Email APIs. The stack is React Native,
+            JavaScript, Redux, Mongoose, Express.js.
+          </p>
+        </div>
+        <div class="right-col">
+          <p class="title">Process Engineering Intern @ Altaflex</p>
+          <p>
+            As a process engineer, I primarily assist senior process engineers with making work instructions and
+            improving the steps operators.
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section section-modal">
     <div id="more">
       <div class="section-buffer"></div>
       <h3>more</h3>
-      <!-- <div class="row"> -->
-      <!-- <div class="left-col"> -->
-      <button class="modal-button">
-        <a data-modal="modal-one">modal1</a>
-      </button>
-      <!-- </div> -->
-      <!-- <div class="right-col"> -->
-      <button class="modal-button">
-        <a data-modal="modal-two">modal2</a>
-      </button>
-      <!-- </div> -->
-      <!-- </div> -->
-
+      <br />
+      <p>Extra information about myself!</p>
+      <br />
+      <div class="row">
+        <button class="modal-button">
+          <a data-modal="modal-one">badminton</a>
+        </button>
+        <button class="modal-button">
+          <a data-modal="modal-two">videogames</a>
+        </button>
+        <button class="modal-button">
+          <a data-modal="modal-three">art</a>
+        </button>
+      </div>
       <div class="modal" id="modal-one">
         <div class="modal-bg modal-exit"></div>
         <div class="modal-container">
-          <h1>Amazing Modal1</h1>
-          <h2>Pure Vanilla JavaScript</h2>
           <button class="modal-close modal-exit">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times fa-3x"></i>
           </button>
+          <h1>Badminton</h1>
+          <h2>I have played badminton for 6 years, and I am part of both competitive and casual clubs at UIUC. I was
+            captain of my high school team and was varsity 1 for Boy's Doubles my senior year. I am the Vice President
+            of Badminton For Fun at UIUC. </h2>
         </div>
       </div>
-
       <div class="modal" id="modal-two">
         <div class="modal-bg modal-exit"></div>
         <div class="modal-container">
-          <h1>Amazing Modal2</h1>
-          <h2>Pure Vanilla JavaScript</h2>
           <button class="modal-close modal-exit">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times fa-3x"></i>
           </button>
+          <h1>Videogames</h1>
+          <h2>Some videogames I enjoy are Destiny 2, League of Legends, Zelda, Mariokart, and Smash Bros.</h2>
+
+        </div>
+      </div>
+      <div class="modal" id="modal-three">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container">
+          <button class="modal-close modal-exit">
+            <i class="fas fa-times fa-3x"></i>
+          </button>
+          <h1>Art</h1>
+          <h2>I like to draw using pencil, but lately I have been trying Procreate. I like to draw geometric designs and
+            dragons.</h2>
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
   <footer id="links">
     <div class="footer-icons">
-      <i class="fab fa-facebook fa-lg"></i>
-      <i class="fab fa-amazon-pay fa-lg"></i>
-      <i class="fab fa-twitter fa-lg"></i>
+      <i class="fab fa-facebook fa-6x"></i>
+      <i class="fab fa-amazon-pay fa-6x"></i>
+      <i class="fab fa-twitter fa-6x"></i>
     </div>
   </footer>
 
   <script src="./js/scrolling.js" type="text/javascript"></script>
   <script src="./js/modal.js" type="text/javascript"></script>
   <script src="./js/carousel.js" type="text/javascript"></script>
-
 </body>
 
 </html>

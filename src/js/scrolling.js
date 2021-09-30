@@ -1,7 +1,6 @@
-/* Your JS here. */
 window.onscroll = function () { scrollFunction() };
 
-var hello = document.getElementById("top");
+var top = document.getElementById("top");
 var navbar = document.getElementById("navbar");
 var navbarBrand = document.getElementById("navbar-brand");
 var navLink = document.getElementsByClassName("nav-link");
@@ -25,7 +24,7 @@ function scrollFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-  if (!isScrolledIntoView(hello)) {
+  if (!isScrolledIntoView(top)) {
     navbar.style.paddingTop = "10px";
     navbar.style.paddingBottom = "10px";
     navbarBrand.style.fontSize = "20px";
@@ -41,6 +40,8 @@ function scrollFunction() {
   for (i = 0; i < navLinksLen; i++) {
     if (navLink[i].getAttribute("href").substring(1) &&
       isScrolledIntoView(document.getElementById(navLink[i].getAttribute("href").substring(1)))) {
+      // get the first element visible in viewport  
+      // substring to remove the #
       visibleElementIdx = i;
       break;
     }
